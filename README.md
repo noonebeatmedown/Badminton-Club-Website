@@ -37,9 +37,3 @@ Pages not uploaded here are created by my groupmates and are currently unavailab
 - **HTML**: Used to create the structure and content of the web pages.
 - **CSS**: Used to style the web pages, making them more user-friendly and visually appealing.
 - **JavaScript**: Implemented to add interactivity to the web pages where necessary.
-
-## How to Run the Project
-
-1. Clone the repository to your local machine:
-   ```bash
-   git clone https://github.com/your-username/badminton-club-website.git
