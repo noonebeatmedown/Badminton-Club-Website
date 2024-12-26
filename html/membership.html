@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head> 
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" /> 
+<title>Membership</title>
+<link href="../css/membership.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="../Images/mainlogo.jpg" type="image/x-icon"> 
+
+<link href="../css/try.css" rel="stylesheet" type="text/css" />
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<link href="../css/membership.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<script>
+    function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+window.addEventListener('scroll', function() {
+  const navbar = document.getElementById("myTopnav");
+  const distance = navbar.offsetTop;
+
+  if (window.pageYOffset > distance) {
+    navbar.classList.add("fixed");
+    document.body.classList.add("fixed-nav");
+  } else {
+    navbar.classList.remove("fixed");
+    document.body.classList.remove("fixed-nav");
+  }
+});
+</script>
+
+<body> 
+
+<div id="container">
+    <br/><br/>
+    <img alt="A GIF sun" src="../Images/logo.gif" style="max-width: 18%; margin-right: 1px; margin-bottom: 80px; margin-top: 50px;"/>
+    <div id="header">
+        Sunshine Badminton Club
+        <div style="font-size: 22px;">Welcome!</div>
+    </div> 
+    <br/>
+    <br/>
+    
+    <div class="topnav" id="myTopnav">
+        <a href="../home.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">About us
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="../aboutus.html">About Us</a>
+                <a href="../blog.html">Blog</a>
+            </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Login
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../login.html">Login</a>
+                    <a href="../bookedslot.html">Booking Slot</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Membership 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="membership.html">Membership</a> 
+                    <a href="form.html">Form to Fill Up</a> 
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Events 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../events.html">Events</a> 
+                    <a href="../newsupdates.html">News updates</a> 
+                    <a href="../teamsandplayers.html">Teams and Players</a> 
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Links 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../links.html">Links</a> 
+                    <a href="contactinfo.html">Contact Information</a> 
+                    <a href="../policy.html">Privacy Policy</a> 
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Resources 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content"> 
+                    <a href="../resources.html">Resources</a> 
+                    <a href="wellness.html">Wellness</a>
+                    <a href="../shop.html">Shop</a>
+                </div>
+            </div>
+        </div>
+        <br/>
+
+        <div class="typewriter" id="content-area">
+            <div id="page-title">
+                Membership
+            </div> 
+            <br/>
+
+            <div id="page-content">
+                <div id="membership-container">
+                    <div class="membership">
+                        <h2>Basic <br/> Membership</h2>
+                        <ul>
+                            <li>Accessible to badminton courts only if courts are available.</li>
+                            <li>No coaching sessions.</li>
+                            <li>Members may charge drop-in fees if invite guests to play.</li>
+                            <li>Able to join other member's friendly games.</li>
+                        </ul>
+                        <br/>
+                        <p><b>Price: RM 60/month</b></p>
+                        <a href="tryform.html?type=basic">Sign Up</a>
+                    </div>
+    
+                    <div class="membership">
+                        <h2>Standard <br/> Membership</h2>
+                        <ul>
+                            <li>Accessible to badminton courts.</li>
+                            <li>Regular coaching sessions for skill improvement.</li>
+                            <li>Participation in club tournaments and competitions.</li>
+                            <li>Discounts on club merchandise.</li>
+                        </ul>
+                        <br/>
+                        <p class="typing-animation"><b>Price: RM 120/month</b></p>
+                        <a href="form.html">Sign Up</a>
+                    </div>
+                    
+                    <div class="membership">
+                        <h2>Premium <br/> Membership</h2>
+                        <ul>
+                            <li>Unlimited access to badminton courts at all times.</li>
+                            <li>Priority access on booking badminton courts.</li>
+                            <li>Regular coaching sessions.</li>
+                            <li>Personalized one-on-one coaching sessions.</li>
+                            <li>Priority registration for tournaments and events.</li>
+                            <li>Specialized training camps and workshops.</li>
+                            <li>Discounts on merchandise and club events.</li>
+                        </ul>
+                        <p><b>Price: RM 180/month</b></p>
+                        <a href="form.html">Sign Up</a>
+                    </div>
+    
+                    <div class="additional-details">
+                        <h3>More details and Information:</h3>
+                        <ul>
+                            <li>Yearly membership renewal is available.</li>
+                            <li>Various payment options (credit/debit card, online transfer, etc.) are accepted for membership fees.</li>
+                            <li>Online registration through the website with an easy-to-use signup form.</li>
+                            <li>Access to training resources, newsletters, and community events.</li>
+                        </ul>
+                        <h3>For Non Members:</h3>
+                        <ul>
+                            <li>Courts can be book by call, walk in or email.</li>
+                            <li>Non-members only can use court if the court is empty or cancel by member.</li>
+                            <li>Price are charged per hour</li>
+                            <li>Shuttlecocks is not provided</li>
+                        </ul>
+                        <p><b>Price: RM 18/hour</b></p>
+                    </div>
+                </div>
+            
+                <div id="cover">
+                    <a href="../login.html">
+                        <div class="button_slide slide_left">Back</div>
+                    </a>
+                    <a href="../events.html">
+                        <div class="button_slide slide_right">Next</div>
+                    </a>
+                </div>
+                <br/><br/>
+                
+                <div id="footer">
+                    Created by: Janice Tan Hooi Chii TP073888 
+                </div>
+            </div>
+        </div>
+    
+    </body>
+    
+    
+    

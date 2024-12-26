@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head> 
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" /> 
+<title>Form to Sign up</title>
+<link href="../css/tryform.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="../Images/mainlogo.png" type="image/x-icon"> 
+
+</head>
+
+<body>
+    <div id="container">
+    <br/><br/>
+    <img alt="A GIF sun" src="../Images/logo.gif" style="max-width: 18%; margin-right: 1px; margin-bottom: 80px; margin-top: 50px;"/>
+    <div id="header">
+        Sunshine Badminton Club
+        <div style="font-size: 22px;">Welcome!</div>
+    </div> 
+    <br/>
+    <br/>
+    
+    <div class="topnav" id="myTopnav">
+        <a href="../home.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">About us ▼
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="../aboutus.html">About Us</a>
+                <a href="../committee.html">Our Committee</a>
+                <a href="../teamsandplayers.html">Teams and Players</a> 
+                <a href="../blog.html">Blog</a>
+            </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Login ▼
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../login.html">Login</a>
+                    <a href="../bookedslot.html">Booking Slot</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Membership ▼
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="membership.html">Membership</a> 
+                    <a href="form.html">Form to Fill Up</a> 
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Rules and regulations ▼
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content"> 
+                    <a href="RulesAndRegulations.html">Rules and Regulations</a> 
+                    <a href="wellness.html">Wellness</a>
+                    <a href="../shop.html">Shop</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Events ▼
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../events.html">Events</a> 
+                    <a href="../newsupdates.html">News updates</a> 
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Links ▼
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../links.html">Links</a> 
+                    <a href="contactinfo.html">Contact Information</a> 
+                    <a href="../policy.html">Privacy Policy</a> 
+                </div>
+            </div>
+        </div>
+        <br/>
+
+        <div style="font-size: clamp(1rem, 5rem, 10rem);">
+            <div class="container">
+                <div class="flex">
+                    <div class="flex-col black growup delay-1">
+                        <div class="bg-primary centerize">
+                            <span class="scaleme delay-1">F</span>
+                        </div>
+                        <div class="black growup delay-1"></div>
+                    </div>
+        
+                    <div class="flex-col black-2 growup delay-2">
+                        <div class="bg-secondary centerize">
+                            <span class="scaleme delay-2">O</span>
+                        </div>
+                        <div class="black-2 growup delay-2"></div>
+                    </div>
+        
+                    <div class="flex-col black growup delay-3">
+                        <div class="bg-primary centerize">
+                            <span class="scaleme delay-3">R</span>
+                        </div>
+                        <div class="black growup delay-3"></div>
+                    </div>
+        
+                    <div class="flex-col black-2 growup delay-4">
+                        <div class="bg-secondary centerize">
+                            <span class="scaleme delay-4">M</span>
+                        </div>
+                        <div class="black-2 growup delay-4"></div>
+                    </div>
+                </div>
+
+                <div id="form-container">
+                    <!-- Basic Membership Form -->
+                    <div id="basic-membership" style="display: none;">
+                        <h2>Basic Membership Form</h2>
+                        <form action="../submit_basic_membership.php" method="POST">
+                            <label for="basic_name">Name:</label>
+                            <input type="text" id="basic_name" name="basic_name" required><br><br>
+                            <!-- Add other fields specific to basic membership -->
+    
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                    <!-- Standard Membership Form -->
+                    <div id="standard-membership" style="display: none;">
+                        <h2>Standard Membership Form</h2>
+                        <form action="../submit_standard_membership.php" method="POST">
+                            <label for="standard_name">Name:</label>
+                            <input type="text" id="standard_name" name="standard_name" required><br><br>
+                            <!-- Add other fields specific to standard membership -->
+    
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                    <!-- Premium Membership Form -->
+                    <div id="premium-membership" style="display: none;">
+                        <h2>Premium Membership Form</h2>
+                        <form action="../submit_premium_membership.php" method="POST">
+                            <label for="premium_name">Name:</label>
+                            <input type="text" id="premium_name" name="premium_name" required><br><br>
+                            <!-- Add other fields specific to premium membership -->
+    
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Function to get URL parameter by name
+            function getUrlParameter(name) {
+                name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            };
+    
+            // Function to display the appropriate form based on the 'type' parameter in the URL
+            document.addEventListener('DOMContentLoaded', function () {
+                var type = getUrlParameter('type');
+                var formContainers = {
+                    'basic': document.getElementById('basic-membership'),
+                    'standard': document.getElementById('standard-membership'),
+                    'premium': document.getElementById('premium-membership')
+                };
+    
+                // Show the form based on the 'type' parameter
+                if (type === 'basic') {
+                    formContainers.basic.style.display = 'block';
+                } else if (type === 'standard') {
+                    formContainers.standard.style.display = 'block';
+                } else if (type === 'premium') {
+                    formContainers.premium.style.display = 'block';
+                } else {
+                    // If no valid type is specified, show a message or default form
+                    console.error('Invalid or no membership type specified.');
+                }
+            });
+        </script>
+    </body>
+    </html>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>

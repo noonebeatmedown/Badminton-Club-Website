@@ -1,0 +1,35 @@
+﻿.font-sans-serif{font-family: sans-serif;} 
+.border-solid{border-style: solid;}
+.border-size-4{border-width: 1ch;}
+.margin-5{margin: 1em;}
+.margin-bottom-5{margin-bottom: 1em;}
+.pad-3{padding: .6em;}
+.pad-x-2{padding-left: .4em; padding-right: .4em;}
+.width-full{width:100%} 
+.color-sky-2{color: rgb(0, 78, 102);}
+.bg_\#dcf7f6{background-color:#dcf7f6  ;}
+/*
+.bg_\#addbda{background-color:#addbda  ;}*/
+.bg_\##E4EEF3{background-color:#E4EEF3  ;}
+.bg_\#85dedb{background-color:#85dedb  ;}
+.bg_\#43c4c0{background-color:#43c4c0/**/  ;}
+.transition_background-color_\.5s{transition:background-color .5s ;}
+.bg_\#01736f{background-color:#01736f  ;}
+.bg_\#557878{background-color:#557878  ;}
+.bold-7{font-weight: 560;}
+.bg_\#85dedb\:hover:hover{background-color:#85dedb;}
+.bg_\#43c4c0\:active:active{background-color:#BCBEC7;} 
+#question{display: none !important;}
+.question{border-style: solid;;margin: 1em;;padding-left: .4em; padding-right: .4em;;background-color:#E4EEF3  ;;transition:background-color .5s ;;}
+.question:hover{background-color:#BCBEC7;;}.question:active{background-color:#BCBEC7;} 
+#question-summary{display: none !important;}
+.question-summary{width:100%;padding: .6em;;color: rgb(0, 78, 102);;font-weight: 560;;}
+section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1px;
+            background-color:#E8E8E8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align:center;
+        }
+

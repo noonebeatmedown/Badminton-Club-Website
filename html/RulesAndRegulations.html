@@ -1,0 +1,554 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Rules and Regulations</title>
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+
+       <style>
+        /* Add your CSS styles here */
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        /* Add more styles as needed */
+        
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1px;
+            background-color:#E8E8E8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align:center;
+        }
+        
+        
+
+        
+        
+    </style>
+    
+    <script language="JavaScript1.2">
+
+/*
+Shock Wave Text script- By ejl@worldmailer.com
+Submitted to and featured on Dynamic Drive (www.dynamicdrive.com)
+For full source code, usage terms, and 100's more DHTML scripts, visit http://dynamicdrive.com
+*/
+
+var size = 25;
+var speed_between_messages=1500  //in miliseconds
+
+
+var tekst = new Array()
+{
+tekst[0] = "Shock Wave text @ Dynamicdrive.com";
+tekst[1] = "Here you can type anything you want";
+tekst[2] = "You can change the size";
+tekst[3] = "And you can change the speed";
+}
+var klaar = 0;
+var s = 0;
+var veran =0;
+var tel = 0;
+function bereken(i,Lengte)
+{
+return (size*Math.abs( Math.sin(i/(Lengte/3.14))) );
+}
+
+function motor(p)
+{
+var output = "";
+for(w = 0;w < tekst[s].length - klaar+1; w++)
+{
+q = bereken(w/2 + p,16);
+if (q > size - 0.5)
+{klaar++;}
+if (q < 5)
+{tel++;
+if (tel > 1)
+{
+tel = 0;
+if (veran == 1)
+{
+veran = 0;
+s++;
+if ( s == tekst.length)
+{s = 0;}
+p = 0;
+if (window.loop)
+{clearInterval(loop)}
+loop = motor();
+}
+}
+}
+output += "<font style='font-size: "+ q +"pt'>" +tekst[s].substring(w,w+1)+ "</font>";	
+}
+for(k=w;k<klaar+w;k++)
+{ 
+output += "<font style='font-size: " + size + "pt'>" +tekst[s].substring(k,k+1)+ "</font>";
+}
+idee.innerHTML = output;	
+}
+
+function startmotor(p){
+if (!document.all)
+return
+var loop = motor(p); 
+if (window.time)
+{clearInterval(time)}
+if (klaar == tekst[s].length)
+{
+klaar = 0;
+veran = 1;
+tel = 0;
+var time = setTimeout("startmotor(" +(p+1) + ")", speed_between_messages);
+}else
+{	
+var time =setTimeout("startmotor(" +(p+1) + ")", 50);
+}
+
+}
+
+</script>
+
+<link href="../css/wellness.css" rel="stylesheet" type="text/css" />
+
+<link href="../css/textanimation.css" rel="stylesheet" type="text/css" />
+
+<link href="../css/button.css" rel="stylesheet" type="text/css" />
+
+<link href="footer.css" rel="stylesheet" type="text/css" />
+
+
+<link href="../css/try.css" rel="stylesheet" type="text/css" />
+</head>
+<body >
+
+
+     
+    <div id="container">
+    <br/><br/>
+    <img alt="A GIF sun" src="../image/logo.gif" style="max-width: 18%; margin-right: 1px; margin-bottom: 80px; margin-top: 50px;"/>
+    <div id="header">
+        Sunshine Badminton Club
+        <div style="font-size: 22px;">Welcome!</div>
+    </div> 
+    <br/>
+    <br/>
+    
+    <div class="topnav" id="myTopnav">
+        <a href="../home.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">About us ▼
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="../aboutus.html">About Us</a>
+                <a href="../committee.html">Our Committee</a>
+                <a href="../teamsandplayers.html">Teams and Players</a> 
+            </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Login ▼
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../login.html">Login</a>
+                    <a href="../bookedslot.html">Booking Slot</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Membership ▼
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="membership.html">Membership</a> 
+                    <a href="form.html">Form to Fill Up</a> 
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Rules and regulations ▼
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content"> 
+                    <a href="rulesandregulations.html">Rules and Regulations</a> 
+                    <a href="wellness.html">Wellness</a>
+                    <a href="../shop.html">Shop</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Events ▼
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../events.html">Events</a> 
+                    <a href="../newsupdates.html">News updates</a> 
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Links ▼
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../links.html">Links</a> 
+                    <a href="contactinfo.html">Contact Information</a> 
+                    <a href="../policy.html">Privacy Policy</a> 
+                </div>
+            </div>
+        </div>
+        <br/>
+        
+        
+        
+        <div style="font-size: clamp(1rem, 5rem, 10rem);">
+         <div class="container">
+         <div class="flex">
+            <!-- First set of flex columns -->
+            <div class="flex-col black growup delay-1">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-1">R</span>
+                </div>
+                <div class="black growup delay-1"></div>
+            </div>
+
+            <div class="flex-col black-2 growup delay-2">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-2">U</span>
+                </div>
+                <div class="black-2 growup delay-2"></div>
+            </div>
+
+            <div class="flex-col black growup delay-3">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-3">L</span>
+                </div>
+                <div class="black growup delay-3"></div>
+            </div>
+
+            <div class="flex-col black-2 growup delay-4">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-4">E</span>
+                </div>
+                <div class="black-2 growup delay-4"></div>
+            </div>
+
+            <div class="flex-col black growup delay-5">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-5">S</span>
+                </div>
+                <div class="black growup delay-5"></div>
+            </div>
+            <!-- ... Repeat similar structure for other columns ... -->
+
+            <!-- Second set of flex columns -->
+            <div class="flex-col2 black growup delay-6">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-6">&amp;</span>
+                </div>
+                <div class="black growup delay-6"></div>
+            </div>
+
+            <div class="flex-col2 black-2 growup delay-7">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-7">R</span>
+                </div>
+                <div class="black-2 growup delay-7"></div>
+            </div>
+
+            <div class="flex-col2 black growup delay-8">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-8">E</span>
+                </div>
+                <div class="black growup delay-8"></div>
+            </div>
+
+            <div class="flex-col2 black-2 growup delay-9">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-9">G</span>
+                </div>
+                <div class="black-2 growup delay-9"></div>
+            </div>
+            <div class="flex-col2 black growup delay-10">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-10">U</span>
+                </div>
+                <div class="black growup delay-10"></div>
+            </div>
+            <div class="flex-col2 black-2 growup delay-11">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-11">L</span>
+                </div>
+                <div class="black-2 growup delay-11"></div>
+            </div>
+            <div class="flex-col2 black growup delay-12">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-12">A</span>
+                </div>
+                <div class="black growup delay-12"></div>
+            </div>
+            <div class="flex-col2 black-2 growup delay-13">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-13">T</span>
+                </div>
+                <div class="black-2 growup delay-13"></div>
+            </div>
+            <div class="flex-col2 black growup delay-14">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-14">I</span>
+                </div>
+                <div class="black growup delay-14"></div>
+            </div>
+            <div class="flex-col2 black-2 growup delay-15">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-15">O</span>
+                </div>
+                <div class="black-2 growup delay-15"></div>
+            </div>
+            <div class="flex-col2 black growup delay-16">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-16">N</span>
+                </div>
+                <div class="black growup delay-16"></div>
+            </div>
+            <div class="flex-col2 black-2 growup delay-17">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-17">S</span>
+                </div>
+                <div class="black-2 growup delay-17"></div>
+            </div>
+
+
+    </div>
+
+
+    <section id="tips" style="font-size:medium; " >     
+    	<h2>Scoring</h2>
+        <p>
+        	<ul>
+        		<li>A match consists of the best of three games.</li>
+        		<li>Each game is played to 21 points, with the side that first scores 21 points winning that game.</li>
+        		<li>f the score reaches 20-20, the game continues until one side gains a two-point lead.</li>
+        		<br/>
+        	<div align="center">
+        	<figure class="snip0054 blue">
+		  	<img src="../image/target-4384800_640.jpg"alt="sample24" />
+		  		<figcaption>
+		    	<div><i class="ion-star"></i></div>
+		    	<div>
+		      		<p>Scoring</p>
+		    	</div>
+		    	<a href="#"></a>
+		  		</figcaption>
+			</figure>
+			</div>
+        	</ul>
+        
+        
+        </p>
+    </section> 
+    
+	<section id="tips" style="font-size:medium;" >     
+    	<h2>Serving</h2>
+        <p>
+        	<ul>
+        		<li>The right to serve is determined by a coin toss or rally.</li>
+        		<li>The server must stand within the service court and hit the shuttlecock below the waist with the racquet.
+				</li>
+        		<li>The serve must be diagonal, from one service court to the other.</li>
+        		<li>The server continues to serve until they make a fault (e.g., the shuttlecock lands outside the boundaries).</li>
+        		<div align="center">
+        		<figure class="snip0054 blue">
+		  		<img src="../image/pexels-vlad-vasnetsov-2202685.jpg"alt="sample24" />
+		  			<figcaption>
+		    		<div><i class="ion-star"></i></div>
+		    		<div>
+		      			<p>Serving</p>
+		    		</div>
+		    		<a href="#"></a>
+		  			</figcaption>
+				</figure>
+				</div>
+
+        	</ul>
+        
+        
+        </p>
+    </section>  
+    
+    
+    <section id="tips" style="font-size:medium;" >     
+    	<h2>Doubles Play</h2>
+        <p>
+        	<ul>
+        		<li>A point is scored when the shuttlecock lands within the opponent's court boundaries.</li>
+        		<li>If a fault is committed (e.g., the shuttlecock lands out of bounds, a player touches the net, or the shuttlecock is hit twice), the opponent scores a point.
+				</li>
+				<div align="center">
+        		<figure class="snip0054 blue">
+		  			<img src="../image/pexels-eric-anada-3660204.jpg"alt="sample24" />
+		  			<figcaption>
+		    		<div><i class="ion-star"></i></div>
+		    		<div>
+		      			<p>Double play</p>
+		    		</div>
+		    		<a href="#"></a>
+		  			</figcaption>
+				</figure>
+				</div>
+
+        		        		
+        	</ul>
+        </p>
+    </section> 
+    
+	<section id="tips" style="font-size:medium; " >     
+    	<h2>Change of Ends</h2>
+        <p>
+        	<ul>
+        		<li>Players or teams change ends at the end of each game and when one side reaches 11 points in the third game.</li>
+        		 <div align="center">
+        		<figure class="snip0054 blue">
+		  		<img src="../image/pexels-raj-tatavarthy-102970.jpg"alt="sample24" />
+		  			<figcaption>
+		    		<div><i class="ion-star"></i></div>
+		    		<div>
+		      			<p>Change of Ends</p>
+		    		</div>
+		    		<a href="#"></a>
+		  			</figcaption>
+				</figure>
+			</div>
+       		        		
+        	</ul>
+        </p>
+    </section>
+    
+    
+    <section id="tips" style="font-size:medium;" >     
+    	<h2>Let</h2>
+        <p>
+        	<ul>
+        		<li>If a rally is hindered by circumstances beyond the players' control (e.g., a shuttlecock getting caught in the net), the rally is declared a "let," and the point is replayed.</li>
+        		<div align="center">
+        		<figure class="snip0054 blue">
+		  		<img src="../image/pexels-kübra-kuzu-17538215.jpg"alt="sample24" />
+		  			<figcaption>
+		    		<div><i class="ion-star"></i></div>
+		    		<div>
+		      			<p>Let</p>
+		    		</div>
+		    		<a href="#"></a>
+		  			</figcaption>
+				</figure>
+			</div>
+       		        		
+        	</ul>
+        </p>
+    </section>
+
+    
+    <section id="tips" style="font-size:medium;" >     
+    	<h2>Faults</h2>
+    	<h3>A fault is declared if a player:</h3>
+        <p>
+        	<ul>
+        		<li>Fails to serve or receive within the boundaries of the court.</li>
+        		<li>Fails to hit the shuttlecock over the net and into the opponent's court.
+				</li>
+				<li>Touches the net with the racquet or body.</li>
+        		<li>Hits the shuttlecock before it crosses the net.</li>
+        		<li>Hits the shuttlecock twice successively.</li>
+        		<div align="center">
+        		<figure class="snip0054 blue">
+		  		<img src="../image/pexels-shvets-production-8007411.jpg"alt="sample24" />
+		  			<figcaption>
+		    		<div><i class="ion-star"></i></div>
+		    		<div>
+		      			<p>Faults</p>
+		    		</div>
+		    		<a href="#"></a>
+		  			</figcaption>
+				</figure>
+				</div>
+
+
+				
+        		        		
+        	</ul>
+        </p>
+    </section> 
+    
+</div>
+</div>
+    <div id="cover">
+                    <a href="login.html">
+                        <div class="button_slide slide_left">Back</div>
+                    </a>
+                    <a href="events.html">
+                        <div class="button_slide slide_right">Next</div>
+                    </a>
+    </div>
+    <br/>
+  
+    
+    
+    
+   <div id="footer">
+		<div class="footer-left">
+			<h3>Sunshine Badminton Club</h3>
+	
+			<p>Copyright &#169; 2023 Sunshine Badminton Club <br/>All rights reserved</p>
+		</div>
+		
+		<div class="footer-center" style="font-size:medium">
+			<table>
+				<tr>
+					<td>
+					<img src="../image/envelope.png" class="footer-envelope" alt="icon"/></td>
+					<td><p>sunshinebadmintonclub@mail.apu.edu.my</p></td>
+				</tr>
+				<tr>
+					<td>
+					<img src="../image/phone.png" class="footer-phone" alt="icon"/></td>
+					<td><p>016-804-0107 - Janice Tan Hooi Chii <br/>
+						011-1088-7482 - Lim Shu Yi <br/>
+						010-770-2168 - Kong Yin Er <br/>
+						017-222-0611 - Nicole Lim Ko Er</p>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="../image/location.png" /></td>
+					<td><p>04-01, Block B, Level 3 @ APU New Campus</p></td>
+				</tr>
+			</table>
+		</div>
+	
+		<div class="footer-right">
+			<p class="footer-aboutclub">
+				<span>About the club</span>
+				Sunshine Badminton Club fosters an inclusive and friendly environment for badminton enthusiasts, providing a platform for players of all skill levels to engage in the sport with joy.
+			</p>
+	
+			<p class="footer-query" >
+				<span>Any questions?</span>
+				Get to Contact Us Page by clicking <a href="contactinfo.html">HERE</a>
+			</p>
+		</div>
+	</div>
+<div id="footer-credit" >Created by: Kong Yin Er TP073395</div>
+    
+  
+ 
+	  
+        
+  </body>
+</html>
+
+
+
+

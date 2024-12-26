@@ -1,0 +1,242 @@
+﻿
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+        :root {
+        
+        	--font1: "Audiowide";
+            font-family: var(--font1);
+            font-family:"Comic Sans MS";
+        
+            
+         
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            
+            overflow: hidden;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            width: calc(100% / 5);
+            height: 100%;
+        }
+
+        .flex-col2 {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            width: calc(100% / 7);
+            top: -1px; /* fix flashing in edge */
+            height: calc(100% + 1px);
+            position: relative;
+        }
+
+        .centerize {
+            text-align: center;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .red {
+            background: red;
+            width: 100%;
+            height: calc(100% / 3);
+        }
+
+        .green {
+            background: green;
+            width: 100%;
+            height: calc(100% / 3);
+        }
+
+        .blue {
+            background: blue;
+            width: 100%;
+            height: calc(100% / 3);
+        }
+
+        .white {
+            color: #111;
+            background: #eee;
+            width: 100%;
+            height: calc(100% / 3);
+        }
+
+        .black {
+            color:#E1EEF4;
+            background: ;
+            width: 100%;
+            height: calc(100% / 3);
+        }
+
+        .black-2 {
+            color:#E1EEF4 ;
+            
+            background:;
+            width: 100%;
+            height: calc(100% / 3);
+        }
+
+        .bg-primary {
+            color: #eee;
+            background-color:#BCBFC9;
+            width: 100%;
+            height: calc(100% / 3);
+        }
+
+        .bg-secondary {
+            background-color:#4D5462;
+            width: 100%;
+            height: calc(100% / 3);
+        }
+
+        .bg-trinary {
+            background: #3B0470;
+            width: 100%;
+            height: calc(100% / 3);
+        }
+
+        .bg-quaternary {
+            background: #130873;
+            width: 100%;
+            height: calc(100% / 3);
+        }
+
+        .growup {
+            animation: growup 1s infinite alternate;
+        }
+
+        .scaleme {
+            animation: scaleme 1s infinite alternate;
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-5 {
+            animation-delay: 0.5s;
+        }
+
+        .delay-6 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-7 {
+            animation-delay: 0.7s;
+        }
+        
+        .delay-8 {
+            animation-delay: 0.8s;
+        }
+        
+        .delay-9 {
+            animation-delay: 0.9s;
+        }
+                
+        .delay-10 {
+            animation-delay: 1.0s;
+        }
+        
+         .delay-11 {
+            animation-delay: 1.1s;
+        }
+        
+         .delay-12 {
+            animation-delay: 1.2s;
+        }
+        
+         .delay-13 {
+            animation-delay: 1.3s;
+        }
+        
+         .delay-14 {
+            animation-delay: 1.4s;
+        }
+        
+         .delay-15 {
+            animation-delay: 1.5s;
+        }
+        
+         .delay-16 {
+            animation-delay: 1.6s;
+        }
+        .delay-17 {
+            animation-delay: 1.7s;
+        }
+
+        
+
+
+
+
+
+
+
+
+
+
+        @keyframes growup {
+            from {
+                height: calc(100% / 3);
+            }
+            to {
+                height: calc(100% / 1.5);
+            }
+        }
+
+        @keyframes scaleme {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(2);
+                text-shadow: 0px 4px 4px hsl(0 0% 0% / 0.5);
+            }
+        }
+
+
+
+.progress{
+	white-space: nowrap;
+	color: white;
+	font-size: 12px;
+  	overflow: hidden;
+	background-color: navy;
+	padding-left: 0px;
+	}
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;

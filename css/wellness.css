@@ -1,0 +1,173 @@
+﻿
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+figure.snip0054 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 220px;
+  max-width: 310px;
+  max-height: 220px;
+  width: 100%;
+  background: #000000;
+  text-align: right;
+}
+figure.snip0054 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+figure.snip0054 img {
+  opacity: 1;
+  width: 100%;
+  
+}
+figure.snip0054 figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+figure.snip0054 figcaption > div {
+  height: 50%;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+figure.snip0054 figcaption::before {
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  left: 0;
+  height: 2px;
+  content: '';
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0054 i,
+figure.snip0054 p {
+  margin: 0;
+  opacity: 0;
+}
+figure.snip0054 i {
+  font-weight: 500;
+  position: absolute;
+  font-size: 28px;
+  display: block;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  bottom: 0;
+  right: 30px;
+  background: black;
+  -webkit-transform: translate3d(0%, 50%, 0);
+  transform: translate3d(0%, 50%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0054 p {
+  width: 100%;
+  padding: 10px 35px;
+  font-weight: 300;
+  -webkit-transform: translate3d(0%, -50%, 0);
+  transform: translate3d(0%, -50%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0054 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+figure.snip0054.blue {
+  background: #091b27;
+}
+figure.snip0054.blue i {
+  background: #2980b9;
+}
+figure.snip0054.red {
+  background: #2e0e0a;
+}
+figure.snip0054.red i {
+  background: #c0392b;
+}
+figure.snip0054.yellow {
+  background: #4d2909;
+}
+figure.snip0054.yellow i {
+  background: #e67e22;
+}
+figure.snip0054.green {
+  background: #061c10;
+}
+figure.snip0054.green i {
+  background: #27ae60;
+}
+figure.snip0054:hover img,
+figure.snip0054.hover img {
+  opacity: 0.35;
+}
+figure.snip0054:hover figcaption i,
+figure.snip0054.hover figcaption i,
+figure.snip0054:hover figcaption p,
+figure.snip0054.hover figcaption p,
+figure.snip0054:hover figcaption h3,
+figure.snip0054.hover figcaption h3 {
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  opacity: 1;
+}
+figure.snip0054:hover figcaption::before,
+figure.snip0054.hover figcaption::before {
+  background: #ffffff;
+  right: 30px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+
+/* Demo purposes only */
+html {
+  height: 100%;
+}
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  margin: 0;
+  height: 100%;
+  body {
+ }
+ 
+section{
+
+	text-align: center;
+}
+
+figure.snip0054 {
+    /* Other styles for figure go here */
+}
+
+}
+
+
+
+
+
+

@@ -1,0 +1,1717 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap">
+
+<script type="text/jscript">
+
+
+/***********************************************
+* Form Field Progress Bar- By Ron Jonk- http://www.euronet.nl/~jonkr/
+* Modified by Dynamic Drive for minor changes
+* Script featured/ available at Dynamic Drive- http://www.dynamicdrive.com
+* Please keep this notice intact
+***********************************************/
+
+function textCounter(field,counter,maxlimit,linecounter) {
+	// text width//
+	var fieldWidth =  parseInt(field.offsetWidth);
+	var charcnt = field.value.length;        
+
+	// trim the extra text
+	if (charcnt > maxlimit) { 
+		field.value = field.value.substring(0, maxlimit);
+	}
+
+	else { 
+	// progress bar percentage
+	var percentage = parseInt(100 - (( maxlimit - charcnt) * 100)/maxlimit) ;
+	document.getElementById(counter).style.width =  parseInt((fieldWidth*percentage)/100)+"px";
+	document.getElementById(counter).innerHTML="Limit: "+percentage+"%"
+	// color correction on style from CCFFF -> CC0000
+	setcolor(document.getElementById(counter),percentage,"background-color");
+	}
+}
+
+function setcolor(obj,percentage,prop){
+	obj.style[prop] = "rgb(80%,"+(100-percentage)+"%,"+(100-percentage)+"%)";
+}
+
+</script>
+<title>Form to Fill Up</title>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" type="text/javascript"></script>
+
+
+
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<link href="../css/textanimation.css" rel="stylesheet" type="text/css" />
+<link href="../css/try.css" rel="stylesheet" type="text/css" />
+<link href="../css/button.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="container">
+    <br/><br/>
+    <img alt="A GIF sun" src="../image/logo.gif" style="max-width: 18%; margin-right: 1px; margin-bottom: 80px; margin-top: 50px;"/>
+    <div id="header">
+        Sunshine Badminton Club
+        <div style="font-size: 22px;">Welcome!</div>
+    </div> 
+    <br/>
+    <br/>
+    
+    <div class="topnav" id="myTopnav">
+        <a href="../home.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">About us ▼
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="../aboutus.html">About Us</a>
+                <a href="../committee.html">Our Committee</a>
+                <a href="../teamsandplayers.html">Teams and Players</a> 
+            </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Login ▼
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../login.html">Login</a>
+                    <a href="../bookedslot.html">Booking Slot</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Membership ▼
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="membership.html">Membership</a> 
+                    <a href="form.html">Form to Fill Up</a> 
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Rules and regulations ▼
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content"> 
+                    <a href="rulesandregulations.html">Rules and Regulations</a> 
+                    <a href="wellness.html">Wellness</a>
+                    <a href="../shop.html">Shop</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Events ▼
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../events.html">Events</a> 
+                    <a href="../newsupdates.html">News updates</a> 
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Links ▼
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../links.html">Links</a> 
+                    <a href="contactinfo.html">Contact Information</a> 
+                    <a href="../policy.html">Privacy Policy</a> 
+                </div>
+            </div>
+        </div>
+        <br/>
+        
+    <div style="font-size: clamp(1rem, 5rem, 10rem);">
+    <div class="container">
+        <div class="flex">
+            <!-- First set of flex columns -->
+            <div class="flex-col black growup delay-1">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-1">R</span>
+                </div>
+                <div class="black growup delay-1"></div>
+            </div>
+
+            <div class="flex-col black-2 growup delay-2">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-2">E</span>
+                </div>
+                <div class="black-2 growup delay-2"></div>
+            </div>
+
+            <div class="flex-col black growup delay-3">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-3">G</span>
+                </div>
+                <div class="black growup delay-3"></div>
+            </div>
+
+            <div class="flex-col black-2 growup delay-4">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-4">I</span>
+                </div>
+                <div class="black-2 growup delay-4"></div>
+            </div>
+
+            <div class="flex-col black growup delay-5">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-5">S</span>
+                </div>
+                <div class="black growup delay-5"></div>
+            </div>
+            <!-- ... Repeat similar structure for other columns ... -->
+
+            <!-- Second set of flex columns -->
+            <div class="flex-col2 black growup delay-6">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-6">T</span>
+                </div>
+                <div class="black growup delay-6"></div>
+            </div>
+
+            <div class="flex-col2 black-2 growup delay-7">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-7">R</span>
+                </div>
+                <div class="black-2 growup delay-7"></div>
+            </div>
+
+            <div class="flex-col2 black growup delay-8">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-8">A</span>
+                </div>
+                <div class="black growup delay-8"></div>
+            </div>
+
+            <div class="flex-col2 black-2 growup delay-9">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-9">T</span>
+                </div>
+                <div class="black-2 growup delay-9"></div>
+            </div>
+            <div class="flex-col2 black growup delay-10">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-10">I</span>
+                </div>
+                <div class="black growup delay-10"></div>
+            </div>
+            <div class="flex-col2 black-2 growup delay-11">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-11">O</span>
+                </div>
+                <div class="black-2 growup delay-11"></div>
+            </div>
+            <div class="flex-col2 black growup delay-12">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-12">N</span>
+                </div>
+                <div class="black growup delay-12"></div>
+            </div>
+
+
+
+
+
+
+    
+    
+    </div>
+
+    
+
+  
+    <section style="font-size:medium">
+    	<h1 >Basic Membership Registration</h1>
+	    <form name="bform" method="get" action="#">
+	    
+	    	
+	    	<table class="center" style="border:solid 1px;padding:24px; width: 800px; background-color:#E8E8E8" >
+				<tr>
+					<td>Username</td>
+					<td>:</td>
+					<td><input type="text" name="username" placeholder="Username" size="60" maxlength="60" required/><br/>
+						</td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td>:</td>
+					<td><input type="password" name="pw" placeholder="Password" size="60" maxlength="60" required/><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td>:</td>
+					<td><input type="password" name="cpw" placeholder="Confirm Password" size="60" maxlength="60" required/><br/>
+					</td>
+				</tr>
+
+				<tr>
+					<td>TP Number</td>
+					<td>:</td>
+					<td><input type="text" name="TPno" placeholder="TP000000" rows="" cols="" size="60" maxlength="60" name="maxcharfield" id="maxcharfield" 
+						onKeyDown="textCounter(this,'progressbar1',8)" 
+						onKeyUp="textCounter(this,'progressbar1',8)" 
+						onFocus="textCounter(this,'progressbar1',8)" required/><br />
+
+						<div id="progressbar1" class="progress"></div>
+
+						<script>textCounter(document.getElementById("maxcharfield"),"progressbar1",8)</script>
+						</td>
+				
+				</tr>
+				
+				<tr>
+					<td>Sex:</td>
+					<td>:</td>
+					<td><input type="radio" name="sex" value="Male"/>Male
+				    	<input type="radio" name="sex" value="Female"/>Female
+				    	<input type="radio" name="sex" value="Prefer not to tell"/>Prefer Not to Say
+	    				<br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td>:</td>
+					<td><input type="text" name="email" placeholder="Email" size="60" maxlength="60"/><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Phone Number:</td>
+					<td>:</td>
+					<td><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="60" maxlength="60" placeholder="012-345-6789"/><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Date of birth:</td>
+					<td>:</td>
+					<td><input type="month" id="bdaymonth" name="bdaymonth" /><br/></td>
+				</tr>
+				<tr>
+					<td>Nationality:</td>
+					<td>:</td>
+					<td><select name="nationality">
+  <option value="">-- select one --</option>
+  <option value="afghan">Afghan</option>
+  <option value="albanian">Albanian</option>
+  <option value="algerian">Algerian</option>
+  <option value="american">American</option>
+  <option value="andorran">Andorran</option>
+  <option value="angolan">Angolan</option>
+  <option value="antiguans">Antiguans</option>
+  <option value="argentinean">Argentinean</option>
+  <option value="armenian">Armenian</option>
+  <option value="australian">Australian</option>
+  <option value="austrian">Austrian</option>
+  <option value="azerbaijani">Azerbaijani</option>
+  <option value="bahamian">Bahamian</option>
+  <option value="bahraini">Bahraini</option>
+  <option value="bangladeshi">Bangladeshi</option>
+  <option value="barbadian">Barbadian</option>
+  <option value="barbudans">Barbudans</option>
+  <option value="batswana">Batswana</option>
+  <option value="belarusian">Belarusian</option>
+  <option value="belgian">Belgian</option>
+  <option value="belizean">Belizean</option>
+  <option value="beninese">Beninese</option>
+  <option value="bhutanese">Bhutanese</option>
+  <option value="bolivian">Bolivian</option>
+  <option value="bosnian">Bosnian</option>
+  <option value="brazilian">Brazilian</option>
+  <option value="british">British</option>
+  <option value="bruneian">Bruneian</option>
+  <option value="bulgarian">Bulgarian</option>
+  <option value="burkinabe">Burkinabe</option>
+  <option value="burmese">Burmese</option>
+  <option value="burundian">Burundian</option>
+  <option value="cambodian">Cambodian</option>
+  <option value="cameroonian">Cameroonian</option>
+  <option value="canadian">Canadian</option>
+  <option value="cape verdean">Cape Verdean</option>
+  <option value="central african">Central African</option>
+  <option value="chadian">Chadian</option>
+  <option value="chilean">Chilean</option>
+  <option value="chinese">Chinese</option>
+  <option value="colombian">Colombian</option>
+  <option value="comoran">Comoran</option>
+  <option value="congolese">Congolese</option>
+  <option value="costa rican">Costa Rican</option>
+  <option value="croatian">Croatian</option>
+  <option value="cuban">Cuban</option>
+  <option value="cypriot">Cypriot</option>
+  <option value="czech">Czech</option>
+  <option value="danish">Danish</option>
+  <option value="djibouti">Djibouti</option>
+  <option value="dominican">Dominican</option>
+  <option value="dutch">Dutch</option>
+  <option value="east timorese">East Timorese</option>
+  <option value="ecuadorean">Ecuadorean</option>
+  <option value="egyptian">Egyptian</option>
+  <option value="emirian">Emirian</option>
+  <option value="equatorial guinean">Equatorial Guinean</option>
+  <option value="eritrean">Eritrean</option>
+  <option value="estonian">Estonian</option>
+  <option value="ethiopian">Ethiopian</option>
+  <option value="fijian">Fijian</option>
+  <option value="filipino">Filipino</option>
+  <option value="finnish">Finnish</option>
+  <option value="french">French</option>
+  <option value="gabonese">Gabonese</option>
+  <option value="gambian">Gambian</option>
+  <option value="georgian">Georgian</option>
+  <option value="german">German</option>
+  <option value="ghanaian">Ghanaian</option>
+  <option value="greek">Greek</option>
+  <option value="grenadian">Grenadian</option>
+  <option value="guatemalan">Guatemalan</option>
+  <option value="guinea-bissauan">Guinea-Bissauan</option>
+  <option value="guinean">Guinean</option>
+  <option value="guyanese">Guyanese</option>
+  <option value="haitian">Haitian</option>
+  <option value="herzegovinian">Herzegovinian</option>
+  <option value="honduran">Honduran</option>
+  <option value="hungarian">Hungarian</option>
+  <option value="icelander">Icelander</option>
+  <option value="indian">Indian</option>
+  <option value="indonesian">Indonesian</option>
+  <option value="iranian">Iranian</option>
+  <option value="iraqi">Iraqi</option>
+  <option value="irish">Irish</option>
+  <option value="israeli">Israeli</option>
+  <option value="italian">Italian</option>
+  <option value="ivorian">Ivorian</option>
+  <option value="jamaican">Jamaican</option>
+  <option value="japanese">Japanese</option>
+  <option value="jordanian">Jordanian</option>
+  <option value="kazakhstani">Kazakhstani</option>
+  <option value="kenyan">Kenyan</option>
+  <option value="kittian and nevisian">Kittian and Nevisian</option>
+  <option value="kuwaiti">Kuwaiti</option>
+  <option value="kyrgyz">Kyrgyz</option>
+  <option value="laotian">Laotian</option>
+  <option value="latvian">Latvian</option>
+  <option value="lebanese">Lebanese</option>
+  <option value="liberian">Liberian</option>
+  <option value="libyan">Libyan</option>
+  <option value="liechtensteiner">Liechtensteiner</option>
+  <option value="lithuanian">Lithuanian</option>
+  <option value="luxembourger">Luxembourger</option>
+  <option value="macedonian">Macedonian</option>
+  <option value="malagasy">Malagasy</option>
+  <option value="malawian">Malawian</option>
+  <option value="malaysian">Malaysian</option>
+  <option value="maldivan">Maldivan</option>
+  <option value="malian">Malian</option>
+  <option value="maltese">Maltese</option>
+  <option value="marshallese">Marshallese</option>
+  <option value="mauritanian">Mauritanian</option>
+  <option value="mauritian">Mauritian</option>
+  <option value="mexican">Mexican</option>
+  <option value="micronesian">Micronesian</option>
+  <option value="moldovan">Moldovan</option>
+  <option value="monacan">Monacan</option>
+  <option value="mongolian">Mongolian</option>
+  <option value="moroccan">Moroccan</option>
+  <option value="mosotho">Mosotho</option>
+  <option value="motswana">Motswana</option>
+  <option value="mozambican">Mozambican</option>
+  <option value="namibian">Namibian</option>
+  <option value="nauruan">Nauruan</option>
+  <option value="nepalese">Nepalese</option>
+  <option value="new zealander">New Zealander</option>
+  <option value="ni-vanuatu">Ni-Vanuatu</option>
+  <option value="nicaraguan">Nicaraguan</option>
+  <option value="nigerien">Nigerien</option>
+  <option value="north korean">North Korean</option>
+  <option value="northern irish">Northern Irish</option>
+  <option value="norwegian">Norwegian</option>
+  <option value="omani">Omani</option>
+  <option value="pakistani">Pakistani</option>
+  <option value="palauan">Palauan</option>
+  <option value="panamanian">Panamanian</option>
+  <option value="papua new guinean">Papua New Guinean</option>
+  <option value="paraguayan">Paraguayan</option>
+  <option value="peruvian">Peruvian</option>
+  <option value="polish">Polish</option>
+  <option value="portuguese">Portuguese</option>
+  <option value="qatari">Qatari</option>
+  <option value="romanian">Romanian</option>
+  <option value="russian">Russian</option>
+  <option value="rwandan">Rwandan</option>
+  <option value="saint lucian">Saint Lucian</option>
+  <option value="salvadoran">Salvadoran</option>
+  <option value="samoan">Samoan</option>
+  <option value="san marinese">San Marinese</option>
+  <option value="sao tomean">Sao Tomean</option>
+  <option value="saudi">Saudi</option>
+  <option value="scottish">Scottish</option>
+  <option value="senegalese">Senegalese</option>
+  <option value="serbian">Serbian</option>
+  <option value="seychellois">Seychellois</option>
+  <option value="sierra leonean">Sierra Leonean</option>
+  <option value="singaporean">Singaporean</option>
+  <option value="slovakian">Slovakian</option>
+  <option value="slovenian">Slovenian</option>
+  <option value="solomon islander">Solomon Islander</option>
+  <option value="somali">Somali</option>
+  <option value="south african">South African</option>
+  <option value="south korean">South Korean</option>
+  <option value="spanish">Spanish</option>
+  <option value="sri lankan">Sri Lankan</option>
+  <option value="sudanese">Sudanese</option>
+  <option value="surinamer">Surinamer</option>
+  <option value="swazi">Swazi</option>
+  <option value="swedish">Swedish</option>
+  <option value="swiss">Swiss</option>
+  <option value="syrian">Syrian</option>
+  <option value="taiwanese">Taiwanese</option>
+  <option value="tajik">Tajik</option>
+  <option value="tanzanian">Tanzanian</option>
+  <option value="thai">Thai</option>
+  <option value="togolese">Togolese</option>
+  <option value="tongan">Tongan</option>
+  <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+  <option value="tunisian">Tunisian</option>
+  <option value="turkish">Turkish</option>
+  <option value="tuvaluan">Tuvaluan</option>
+  <option value="ugandan">Ugandan</option>
+  <option value="ukrainian">Ukrainian</option>
+  <option value="uruguayan">Uruguayan</option>
+  <option value="uzbekistani">Uzbekistani</option>
+  <option value="venezuelan">Venezuelan</option>
+  <option value="vietnamese">Vietnamese</option>
+  <option value="welsh">Welsh</option>
+  <option value="yemenite">Yemenite</option>
+  <option value="zambian">Zambian</option>
+  <option value="zimbabwean">Zimbabwean</option>
+</select><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Achievement:</td>
+					<td>:</td>
+					<td><textarea name="achieve" placeholder="Do you have any achievement in badminton?" rows="5" cols="55"></textarea><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>I have played in the badminton tournament before:</td>
+					<td>:</td>
+					<td><input type="radio" name="played?" value="Yes"/> Yes
+	    				<input type="radio" name="played?" value="No"/> No
+	    				<br/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Clicked the below button to submit your registration:
+					</td>
+					<td>:</td>
+					<td><input type="reset" /><button onclick="myalert1()">
+						    submit
+						</button>
+					</td>
+
+				</tr>
+				<tr>
+					<td>Clicked the below button to pay the fee :
+					</td>
+					<td>:</td>
+					<td>
+						<a href="Payment.html" target="_blank">
+						<input type="button" value="Proceed to Payment"/>					
+						</a>
+					</td>
+
+				</tr>
+				<script>
+				function myalert1() 
+				{
+    				var username = document.forms["bform"]["username"].value;
+    				var password = document.forms["bform"]["pw"].value;
+    				var confirmPassword = document.forms["bform"]["cpw"].value;
+    				var tpNumber = document.forms["bform"]["TPno"].value;
+
+    				if (username ==="" || password === "" || confirmPassword === "" || tpNumber === "") {
+        				alert("Submission unsuccessful. Please fill in all the required fields.");
+    					} 
+    				else {
+        			alert("THANK YOU, we received your Basic registration form!");
+    				}
+				}
+				
+				</script>
+				
+
+				
+				
+				
+			</table>
+			
+		</form>
+	    
+	    	
+	    	
+    
+
+    </section>
+    
+    
+    <section style="font-size:medium">
+    	<h1  >Standard Membership Registration</h1>
+    	    <form name="sform" method="get" action="#">
+	    
+	    	
+	    	<table class="center" style="border:solid 1px;padding:24px; width: 800px; background-color:#E8E8E8" >
+				<tr>
+					<td>Username</td>
+					<td>:</td>
+					<td><input type="text" name="username" placeholder="Username" size="60" maxlength="60" required/><br/>
+						</td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td>:</td>
+					<td><input type="password" name="pw" placeholder="Password" size="60" maxlength="60" required/><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td>:</td>
+					<td><input type="cpassword" name="cpw" placeholder="Confirm Password" size="60" maxlength="60" required/><br/>
+					</td>
+				</tr>
+
+				<tr>
+					<td>TP Number</td>
+					<td>:</td>
+					<td><input type="text" name="TPno" placeholder="TP000000" rows="" cols="" size="60" maxlength="60" name="maxcharfield" id="maxcharfield" 
+						onKeyDown="textCounter(this,'progressbar2',8)" 
+						onKeyUp="textCounter(this,'progressbar2',8)" 
+						onFocus="textCounter(this,'progressbar2',8)" required/><br />
+
+						<div id="progressbar2" class="progress"></div>
+
+						<script>textCounter(document.getElementById("maxcharfield"),"progressbar2",8)</script>
+						</td>
+				
+				</tr>
+				
+				<tr>
+					<td>Sex:</td>
+					<td>:</td>
+					<td><input type="radio" name="sex" value="Male"/>Male
+				    	<input type="radio" name="sex" value="Female"/>Female
+				    	<input type="radio" name="sex" value="Prefer not to tell"/>Prefer Not to Say
+	    				<br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td>:</td>
+					<td><input type="text" name="email" placeholder="Email" size="60" maxlength="60"/><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Phone Number:</td>
+					<td>:</td>
+					<td><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="60" maxlength="60"/><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Date of birth:</td>
+					<td>:</td>
+					<td><input type="month" id="bdaymonth" name="bdaymonth" /><br/></td>
+				</tr>
+				<tr>
+					<td>Nationality:</td>
+					<td>:</td>
+					<td><select name="nationality">
+  <option value="">-- select one --</option>
+  <option value="afghan">Afghan</option>
+  <option value="albanian">Albanian</option>
+  <option value="algerian">Algerian</option>
+  <option value="american">American</option>
+  <option value="andorran">Andorran</option>
+  <option value="angolan">Angolan</option>
+  <option value="antiguans">Antiguans</option>
+  <option value="argentinean">Argentinean</option>
+  <option value="armenian">Armenian</option>
+  <option value="australian">Australian</option>
+  <option value="austrian">Austrian</option>
+  <option value="azerbaijani">Azerbaijani</option>
+  <option value="bahamian">Bahamian</option>
+  <option value="bahraini">Bahraini</option>
+  <option value="bangladeshi">Bangladeshi</option>
+  <option value="barbadian">Barbadian</option>
+  <option value="barbudans">Barbudans</option>
+  <option value="batswana">Batswana</option>
+  <option value="belarusian">Belarusian</option>
+  <option value="belgian">Belgian</option>
+  <option value="belizean">Belizean</option>
+  <option value="beninese">Beninese</option>
+  <option value="bhutanese">Bhutanese</option>
+  <option value="bolivian">Bolivian</option>
+  <option value="bosnian">Bosnian</option>
+  <option value="brazilian">Brazilian</option>
+  <option value="british">British</option>
+  <option value="bruneian">Bruneian</option>
+  <option value="bulgarian">Bulgarian</option>
+  <option value="burkinabe">Burkinabe</option>
+  <option value="burmese">Burmese</option>
+  <option value="burundian">Burundian</option>
+  <option value="cambodian">Cambodian</option>
+  <option value="cameroonian">Cameroonian</option>
+  <option value="canadian">Canadian</option>
+  <option value="cape verdean">Cape Verdean</option>
+  <option value="central african">Central African</option>
+  <option value="chadian">Chadian</option>
+  <option value="chilean">Chilean</option>
+  <option value="chinese">Chinese</option>
+  <option value="colombian">Colombian</option>
+  <option value="comoran">Comoran</option>
+  <option value="congolese">Congolese</option>
+  <option value="costa rican">Costa Rican</option>
+  <option value="croatian">Croatian</option>
+  <option value="cuban">Cuban</option>
+  <option value="cypriot">Cypriot</option>
+  <option value="czech">Czech</option>
+  <option value="danish">Danish</option>
+  <option value="djibouti">Djibouti</option>
+  <option value="dominican">Dominican</option>
+  <option value="dutch">Dutch</option>
+  <option value="east timorese">East Timorese</option>
+  <option value="ecuadorean">Ecuadorean</option>
+  <option value="egyptian">Egyptian</option>
+  <option value="emirian">Emirian</option>
+  <option value="equatorial guinean">Equatorial Guinean</option>
+  <option value="eritrean">Eritrean</option>
+  <option value="estonian">Estonian</option>
+  <option value="ethiopian">Ethiopian</option>
+  <option value="fijian">Fijian</option>
+  <option value="filipino">Filipino</option>
+  <option value="finnish">Finnish</option>
+  <option value="french">French</option>
+  <option value="gabonese">Gabonese</option>
+  <option value="gambian">Gambian</option>
+  <option value="georgian">Georgian</option>
+  <option value="german">German</option>
+  <option value="ghanaian">Ghanaian</option>
+  <option value="greek">Greek</option>
+  <option value="grenadian">Grenadian</option>
+  <option value="guatemalan">Guatemalan</option>
+  <option value="guinea-bissauan">Guinea-Bissauan</option>
+  <option value="guinean">Guinean</option>
+  <option value="guyanese">Guyanese</option>
+  <option value="haitian">Haitian</option>
+  <option value="herzegovinian">Herzegovinian</option>
+  <option value="honduran">Honduran</option>
+  <option value="hungarian">Hungarian</option>
+  <option value="icelander">Icelander</option>
+  <option value="indian">Indian</option>
+  <option value="indonesian">Indonesian</option>
+  <option value="iranian">Iranian</option>
+  <option value="iraqi">Iraqi</option>
+  <option value="irish">Irish</option>
+  <option value="israeli">Israeli</option>
+  <option value="italian">Italian</option>
+  <option value="ivorian">Ivorian</option>
+  <option value="jamaican">Jamaican</option>
+  <option value="japanese">Japanese</option>
+  <option value="jordanian">Jordanian</option>
+  <option value="kazakhstani">Kazakhstani</option>
+  <option value="kenyan">Kenyan</option>
+  <option value="kittian and nevisian">Kittian and Nevisian</option>
+  <option value="kuwaiti">Kuwaiti</option>
+  <option value="kyrgyz">Kyrgyz</option>
+  <option value="laotian">Laotian</option>
+  <option value="latvian">Latvian</option>
+  <option value="lebanese">Lebanese</option>
+  <option value="liberian">Liberian</option>
+  <option value="libyan">Libyan</option>
+  <option value="liechtensteiner">Liechtensteiner</option>
+  <option value="lithuanian">Lithuanian</option>
+  <option value="luxembourger">Luxembourger</option>
+  <option value="macedonian">Macedonian</option>
+  <option value="malagasy">Malagasy</option>
+  <option value="malawian">Malawian</option>
+  <option value="malaysian">Malaysian</option>
+  <option value="maldivan">Maldivan</option>
+  <option value="malian">Malian</option>
+  <option value="maltese">Maltese</option>
+  <option value="marshallese">Marshallese</option>
+  <option value="mauritanian">Mauritanian</option>
+  <option value="mauritian">Mauritian</option>
+  <option value="mexican">Mexican</option>
+  <option value="micronesian">Micronesian</option>
+  <option value="moldovan">Moldovan</option>
+  <option value="monacan">Monacan</option>
+  <option value="mongolian">Mongolian</option>
+  <option value="moroccan">Moroccan</option>
+  <option value="mosotho">Mosotho</option>
+  <option value="motswana">Motswana</option>
+  <option value="mozambican">Mozambican</option>
+  <option value="namibian">Namibian</option>
+  <option value="nauruan">Nauruan</option>
+  <option value="nepalese">Nepalese</option>
+  <option value="new zealander">New Zealander</option>
+  <option value="ni-vanuatu">Ni-Vanuatu</option>
+  <option value="nicaraguan">Nicaraguan</option>
+  <option value="nigerien">Nigerien</option>
+  <option value="north korean">North Korean</option>
+  <option value="northern irish">Northern Irish</option>
+  <option value="norwegian">Norwegian</option>
+  <option value="omani">Omani</option>
+  <option value="pakistani">Pakistani</option>
+  <option value="palauan">Palauan</option>
+  <option value="panamanian">Panamanian</option>
+  <option value="papua new guinean">Papua New Guinean</option>
+  <option value="paraguayan">Paraguayan</option>
+  <option value="peruvian">Peruvian</option>
+  <option value="polish">Polish</option>
+  <option value="portuguese">Portuguese</option>
+  <option value="qatari">Qatari</option>
+  <option value="romanian">Romanian</option>
+  <option value="russian">Russian</option>
+  <option value="rwandan">Rwandan</option>
+  <option value="saint lucian">Saint Lucian</option>
+  <option value="salvadoran">Salvadoran</option>
+  <option value="samoan">Samoan</option>
+  <option value="san marinese">San Marinese</option>
+  <option value="sao tomean">Sao Tomean</option>
+  <option value="saudi">Saudi</option>
+  <option value="scottish">Scottish</option>
+  <option value="senegalese">Senegalese</option>
+  <option value="serbian">Serbian</option>
+  <option value="seychellois">Seychellois</option>
+  <option value="sierra leonean">Sierra Leonean</option>
+  <option value="singaporean">Singaporean</option>
+  <option value="slovakian">Slovakian</option>
+  <option value="slovenian">Slovenian</option>
+  <option value="solomon islander">Solomon Islander</option>
+  <option value="somali">Somali</option>
+  <option value="south african">South African</option>
+  <option value="south korean">South Korean</option>
+  <option value="spanish">Spanish</option>
+  <option value="sri lankan">Sri Lankan</option>
+  <option value="sudanese">Sudanese</option>
+  <option value="surinamer">Surinamer</option>
+  <option value="swazi">Swazi</option>
+  <option value="swedish">Swedish</option>
+  <option value="swiss">Swiss</option>
+  <option value="syrian">Syrian</option>
+  <option value="taiwanese">Taiwanese</option>
+  <option value="tajik">Tajik</option>
+  <option value="tanzanian">Tanzanian</option>
+  <option value="thai">Thai</option>
+  <option value="togolese">Togolese</option>
+  <option value="tongan">Tongan</option>
+  <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+  <option value="tunisian">Tunisian</option>
+  <option value="turkish">Turkish</option>
+  <option value="tuvaluan">Tuvaluan</option>
+  <option value="ugandan">Ugandan</option>
+  <option value="ukrainian">Ukrainian</option>
+  <option value="uruguayan">Uruguayan</option>
+  <option value="uzbekistani">Uzbekistani</option>
+  <option value="venezuelan">Venezuelan</option>
+  <option value="vietnamese">Vietnamese</option>
+  <option value="welsh">Welsh</option>
+  <option value="yemenite">Yemenite</option>
+  <option value="zambian">Zambian</option>
+  <option value="zimbabwean">Zimbabwean</option>
+</select><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Achievement:</td>
+					<td>:</td>
+					<td><textarea name="achieve" placeholder="Do you have any achievement in badminton?" rows="5" cols="55"></textarea><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>I have played in the badminton tournament before:</td>
+					<td>:</td>
+					<td><input type="radio" name="played?" value="Yes"/> Yes
+	    				<input type="radio" name="played?" value="No"/> No
+	    				<br/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Clicked the below button to submit your registration:
+					</td>
+					<td>:</td>
+					<td><button onclick="myalert2()">
+						    submit
+						</button>
+					</td>
+
+				</tr>
+				<tr>
+					<td>Clicked the below button to pay the fee :
+					</td>
+					<td>:</td>
+					<td>
+						<a href="Payment.html" target="_blank">
+						<input type="button" value="Proceed to Payment"/>					
+						</a>
+					</td>
+
+				</tr>
+
+				<script>
+				    function myalert2() 
+				    {
+				    
+	    				var username = document.forms["sform"]["username"].value;
+	    				var password = document.forms["sform"]["pw"].value;
+	    				var confirmPassword = document.forms["sform"]["cpw"].value;
+	    				var tpNumber = document.forms["sform"]["TPno"].value;
+	
+	    				if (username === "" || password === "" || confirmPassword === "" || tpNumber === "") {
+	        				alert("Submission unsuccessful. Please fill in all the required fields.");
+	    					} 
+	    				else {
+	        			alert("THANK YOU we received your Standard registration form!");
+	    					}				    
+    				}
+				</script>
+				
+				
+				
+			</table>
+			
+		</form>
+    
+    </section>
+    
+    
+        <section style="font-size:medium">
+    	<h1  >Premium Membership Registration</h1>
+    	    <form name="pform" method="get" action="#">
+	    
+	    	
+	    	<table class="center" style="border:solid 1px;padding:24px; width: 800px; background-color:#E8E8E8" >
+				<tr>
+					<td>Username</td>
+					<td>:</td>
+					<td><input type="text" name="username" placeholder="Username" size="60" maxlength="60" required/><br/>
+						</td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td>:</td>
+					<td><input type="password" name="pw" placeholder="Password" size="60" maxlength="60" required/><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td>:</td>
+					<td><input type="cpassword" name="cpw" placeholder="Confirm Password" size="60" maxlength="60" required/><br/>
+					</td>
+				</tr>
+
+				<tr>
+					<td>TP Number</td>
+					<td>:</td>
+					<td><input type="text" name="TPno" placeholder="TP000000" rows="" cols="" size="60" maxlength="60" name="maxcharfield" id="maxcharfield" 
+						onKeyDown="textCounter(this,'progressbar3',8)" 
+						onKeyUp="textCounter(this,'progressbar3',8)" 
+						onFocus="textCounter(this,'progressbar3',8)" required/><br />
+
+						<div id="progressbar3" class="progress"></div>
+
+						<script>textCounter(document.getElementById("maxcharfield"),"progressbar3",8)</script>
+						</td>
+				
+				</tr>
+				
+				<tr>
+					<td>Sex:</td>
+					<td>:</td>
+					<td><input type="radio" name="sex" value="Male"/>Male
+				    	<input type="radio" name="sex" value="Female"/>Female
+				    	<input type="radio" name="sex" value="Prefer not to tell"/>Prefer Not to Say
+	    				<br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td>:</td>
+					<td><input type="text" name="email" placeholder="Email" size="60" maxlength="60"/><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Phone Number:</td>
+					<td>:</td>
+					<td><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="60" maxlength="60"/><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Date of birth:</td>
+					<td>:</td>
+					<td><input type="month" id="bdaymonth" name="bdaymonth" /><br/></td>
+				</tr>
+				<tr>
+					<td>Nationality:</td>
+					<td>:</td>
+					<td><select name="nationality">
+  <option value="">-- select one --</option>
+  <option value="afghan">Afghan</option>
+  <option value="albanian">Albanian</option>
+  <option value="algerian">Algerian</option>
+  <option value="american">American</option>
+  <option value="andorran">Andorran</option>
+  <option value="angolan">Angolan</option>
+  <option value="antiguans">Antiguans</option>
+  <option value="argentinean">Argentinean</option>
+  <option value="armenian">Armenian</option>
+  <option value="australian">Australian</option>
+  <option value="austrian">Austrian</option>
+  <option value="azerbaijani">Azerbaijani</option>
+  <option value="bahamian">Bahamian</option>
+  <option value="bahraini">Bahraini</option>
+  <option value="bangladeshi">Bangladeshi</option>
+  <option value="barbadian">Barbadian</option>
+  <option value="barbudans">Barbudans</option>
+  <option value="batswana">Batswana</option>
+  <option value="belarusian">Belarusian</option>
+  <option value="belgian">Belgian</option>
+  <option value="belizean">Belizean</option>
+  <option value="beninese">Beninese</option>
+  <option value="bhutanese">Bhutanese</option>
+  <option value="bolivian">Bolivian</option>
+  <option value="bosnian">Bosnian</option>
+  <option value="brazilian">Brazilian</option>
+  <option value="british">British</option>
+  <option value="bruneian">Bruneian</option>
+  <option value="bulgarian">Bulgarian</option>
+  <option value="burkinabe">Burkinabe</option>
+  <option value="burmese">Burmese</option>
+  <option value="burundian">Burundian</option>
+  <option value="cambodian">Cambodian</option>
+  <option value="cameroonian">Cameroonian</option>
+  <option value="canadian">Canadian</option>
+  <option value="cape verdean">Cape Verdean</option>
+  <option value="central african">Central African</option>
+  <option value="chadian">Chadian</option>
+  <option value="chilean">Chilean</option>
+  <option value="chinese">Chinese</option>
+  <option value="colombian">Colombian</option>
+  <option value="comoran">Comoran</option>
+  <option value="congolese">Congolese</option>
+  <option value="costa rican">Costa Rican</option>
+  <option value="croatian">Croatian</option>
+  <option value="cuban">Cuban</option>
+  <option value="cypriot">Cypriot</option>
+  <option value="czech">Czech</option>
+  <option value="danish">Danish</option>
+  <option value="djibouti">Djibouti</option>
+  <option value="dominican">Dominican</option>
+  <option value="dutch">Dutch</option>
+  <option value="east timorese">East Timorese</option>
+  <option value="ecuadorean">Ecuadorean</option>
+  <option value="egyptian">Egyptian</option>
+  <option value="emirian">Emirian</option>
+  <option value="equatorial guinean">Equatorial Guinean</option>
+  <option value="eritrean">Eritrean</option>
+  <option value="estonian">Estonian</option>
+  <option value="ethiopian">Ethiopian</option>
+  <option value="fijian">Fijian</option>
+  <option value="filipino">Filipino</option>
+  <option value="finnish">Finnish</option>
+  <option value="french">French</option>
+  <option value="gabonese">Gabonese</option>
+  <option value="gambian">Gambian</option>
+  <option value="georgian">Georgian</option>
+  <option value="german">German</option>
+  <option value="ghanaian">Ghanaian</option>
+  <option value="greek">Greek</option>
+  <option value="grenadian">Grenadian</option>
+  <option value="guatemalan">Guatemalan</option>
+  <option value="guinea-bissauan">Guinea-Bissauan</option>
+  <option value="guinean">Guinean</option>
+  <option value="guyanese">Guyanese</option>
+  <option value="haitian">Haitian</option>
+  <option value="herzegovinian">Herzegovinian</option>
+  <option value="honduran">Honduran</option>
+  <option value="hungarian">Hungarian</option>
+  <option value="icelander">Icelander</option>
+  <option value="indian">Indian</option>
+  <option value="indonesian">Indonesian</option>
+  <option value="iranian">Iranian</option>
+  <option value="iraqi">Iraqi</option>
+  <option value="irish">Irish</option>
+  <option value="israeli">Israeli</option>
+  <option value="italian">Italian</option>
+  <option value="ivorian">Ivorian</option>
+  <option value="jamaican">Jamaican</option>
+  <option value="japanese">Japanese</option>
+  <option value="jordanian">Jordanian</option>
+  <option value="kazakhstani">Kazakhstani</option>
+  <option value="kenyan">Kenyan</option>
+  <option value="kittian and nevisian">Kittian and Nevisian</option>
+  <option value="kuwaiti">Kuwaiti</option>
+  <option value="kyrgyz">Kyrgyz</option>
+  <option value="laotian">Laotian</option>
+  <option value="latvian">Latvian</option>
+  <option value="lebanese">Lebanese</option>
+  <option value="liberian">Liberian</option>
+  <option value="libyan">Libyan</option>
+  <option value="liechtensteiner">Liechtensteiner</option>
+  <option value="lithuanian">Lithuanian</option>
+  <option value="luxembourger">Luxembourger</option>
+  <option value="macedonian">Macedonian</option>
+  <option value="malagasy">Malagasy</option>
+  <option value="malawian">Malawian</option>
+  <option value="malaysian">Malaysian</option>
+  <option value="maldivan">Maldivan</option>
+  <option value="malian">Malian</option>
+  <option value="maltese">Maltese</option>
+  <option value="marshallese">Marshallese</option>
+  <option value="mauritanian">Mauritanian</option>
+  <option value="mauritian">Mauritian</option>
+  <option value="mexican">Mexican</option>
+  <option value="micronesian">Micronesian</option>
+  <option value="moldovan">Moldovan</option>
+  <option value="monacan">Monacan</option>
+  <option value="mongolian">Mongolian</option>
+  <option value="moroccan">Moroccan</option>
+  <option value="mosotho">Mosotho</option>
+  <option value="motswana">Motswana</option>
+  <option value="mozambican">Mozambican</option>
+  <option value="namibian">Namibian</option>
+  <option value="nauruan">Nauruan</option>
+  <option value="nepalese">Nepalese</option>
+  <option value="new zealander">New Zealander</option>
+  <option value="ni-vanuatu">Ni-Vanuatu</option>
+  <option value="nicaraguan">Nicaraguan</option>
+  <option value="nigerien">Nigerien</option>
+  <option value="north korean">North Korean</option>
+  <option value="northern irish">Northern Irish</option>
+  <option value="norwegian">Norwegian</option>
+  <option value="omani">Omani</option>
+  <option value="pakistani">Pakistani</option>
+  <option value="palauan">Palauan</option>
+  <option value="panamanian">Panamanian</option>
+  <option value="papua new guinean">Papua New Guinean</option>
+  <option value="paraguayan">Paraguayan</option>
+  <option value="peruvian">Peruvian</option>
+  <option value="polish">Polish</option>
+  <option value="portuguese">Portuguese</option>
+  <option value="qatari">Qatari</option>
+  <option value="romanian">Romanian</option>
+  <option value="russian">Russian</option>
+  <option value="rwandan">Rwandan</option>
+  <option value="saint lucian">Saint Lucian</option>
+  <option value="salvadoran">Salvadoran</option>
+  <option value="samoan">Samoan</option>
+  <option value="san marinese">San Marinese</option>
+  <option value="sao tomean">Sao Tomean</option>
+  <option value="saudi">Saudi</option>
+  <option value="scottish">Scottish</option>
+  <option value="senegalese">Senegalese</option>
+  <option value="serbian">Serbian</option>
+  <option value="seychellois">Seychellois</option>
+  <option value="sierra leonean">Sierra Leonean</option>
+  <option value="singaporean">Singaporean</option>
+  <option value="slovakian">Slovakian</option>
+  <option value="slovenian">Slovenian</option>
+  <option value="solomon islander">Solomon Islander</option>
+  <option value="somali">Somali</option>
+  <option value="south african">South African</option>
+  <option value="south korean">South Korean</option>
+  <option value="spanish">Spanish</option>
+  <option value="sri lankan">Sri Lankan</option>
+  <option value="sudanese">Sudanese</option>
+  <option value="surinamer">Surinamer</option>
+  <option value="swazi">Swazi</option>
+  <option value="swedish">Swedish</option>
+  <option value="swiss">Swiss</option>
+  <option value="syrian">Syrian</option>
+  <option value="taiwanese">Taiwanese</option>
+  <option value="tajik">Tajik</option>
+  <option value="tanzanian">Tanzanian</option>
+  <option value="thai">Thai</option>
+  <option value="togolese">Togolese</option>
+  <option value="tongan">Tongan</option>
+  <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+  <option value="tunisian">Tunisian</option>
+  <option value="turkish">Turkish</option>
+  <option value="tuvaluan">Tuvaluan</option>
+  <option value="ugandan">Ugandan</option>
+  <option value="ukrainian">Ukrainian</option>
+  <option value="uruguayan">Uruguayan</option>
+  <option value="uzbekistani">Uzbekistani</option>
+  <option value="venezuelan">Venezuelan</option>
+  <option value="vietnamese">Vietnamese</option>
+  <option value="welsh">Welsh</option>
+  <option value="yemenite">Yemenite</option>
+  <option value="zambian">Zambian</option>
+  <option value="zimbabwean">Zimbabwean</option>
+</select><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Achievement:</td>
+					<td>:</td>
+					<td><textarea name="achieve" placeholder="Do you have any achievement in badminton?" rows="5" cols="55"></textarea><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>I have played in the badminton tournament before:</td>
+					<td>:</td>
+					<td><input type="radio" name="played?" value="Yes"/> Yes
+	    				<input type="radio" name="played?" value="No"/> No
+	    				<br/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Clicked the below button to submit your registration:
+					</td>
+					<td>:</td>
+					<td><button onclick="myalert3()">
+						    submit
+						</button>
+					</td>
+
+				</tr>
+				<tr>
+					<td>Clicked the below button to pay the fee :
+					</td>
+					<td>:</td>
+					<td>
+						<a href="Payment.html" target="_blank">
+						<input type="button" value="Proceed to Payment"/>					
+						</a>
+					</td>
+
+				</tr>
+
+				<script>
+				    function myalert3() 
+				    {
+				    
+    				var username = document.forms["pform"]["username"].value;
+    				var password = document.forms["pform"]["pw"].value;
+    				var confirmPassword = document.forms["pform"]["cpw"].value;
+    				var tpNumber = document.forms["pform"]["TPno"].value;
+
+    				if (username === "" || password === "" || confirmPassword === "" || tpNumber === "") {
+        				alert("Submission unsuccessful. Please fill in all the required fields.");
+    					} 
+    				else {
+        			alert("THANK YOU we received your Premium registration form!");
+    				}
+			}
+
+				</script>
+				
+				
+				
+			</table>
+			
+		</form><br/><br/><br/><br/><br/><br/><br/>
+    
+    </section>
+   
+    
+    
+    	
+    	<div style="font-size: clamp(1rem, 5rem, 10rem);">
+    	<div class="container">
+        <div class="flex">
+            <!-- First set of flex columns -->
+            <div class="flex-col black growup delay-1">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-1">H</span>
+                </div>
+                <div class="black growup delay-1"></div>
+            </div>
+
+            <div class="flex-col black-2 growup delay-2">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-2">O</span>
+                </div>
+                <div class="black-2 growup delay-2"></div>
+            </div>
+
+            <div class="flex-col black growup delay-3">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-3">P</span>
+                </div>
+                <div class="black growup delay-3"></div>
+            </div>
+
+            <div class="flex-col black-2 growup delay-4">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-4">E</span>
+                </div>
+                <div class="black-2 growup delay-4"></div>
+            </div>
+             <div class="flex-col2 black growup delay-3">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-3"></span>
+                </div>
+                <div class="black growup delay-3"></div>
+            </div>
+
+            <div class="flex-col black growup delay-5">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-5">Y</span>
+                </div>
+                <div class="black growup delay-5"></div>
+            </div>
+            <!-- ... Repeat similar structure for other columns ... -->
+
+            <!-- Second set of flex columns -->
+            <div class="flex-col2 black growup delay-6">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-6">O</span>
+                </div>
+                <div class="black growup delay-6"></div>
+            </div>
+
+            <div class="flex-col2 black-2 growup delay-7">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-7">U</span>
+                </div>
+                <div class="black-2 growup delay-7"></div>
+            </div>
+             <div class="flex-col2 black growup delay-8">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-8"></span>
+                </div>
+                <div class="black growup delay-8"></div>
+            </div>
+
+            <div class="flex-col2 black growup delay-9">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-9">J</span>
+                </div>
+                <div class="black growup delay-9"></div>
+            </div>
+
+            <div class="flex-col2 black-2 growup delay-10">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-10">O</span>
+                </div>
+                <div class="black-2 growup delay-10"></div>
+            </div>
+            <div class="flex-col2 black growup delay-11">
+                <div class="bg-secondary centerize">
+                    <span class="scaleme delay-11">I</span>
+                </div>
+                <div class="black growup delay-11"></div>
+            </div>
+            <div class="flex-col2 black-2 growup delay-12">
+                <div class="bg-primary centerize">
+                    <span class="scaleme delay-12">N</span>
+                </div>
+                <div class="black-2 growup delay-12"></div>
+            </div>
+           
+
+    	
+    	
+    	
+    	
+    	
+    	</div>
+    
+        <section style="font-size:medium" >
+    	<h1  >For Non Member</h1>
+    	    <form name="nform" method="get" action="#">
+	    
+	    	
+	    	<table class="center" style="border:solid 1px;padding:24px; width: 800px;background-color:#E8E8E8" >
+				<tr>
+					<td>Name</td>
+					<td>:</td>
+					<td><input type="text" name="Name" placeholder="Name" size="60" maxlength="60" required/><br/>
+						</td>
+				</tr>
+				<tr>
+					<td>TP Number</td>
+					<td>:</td>
+					<td><input type="text" name="TPno" placeholder="TP000000" rows="" cols="" size="60" maxlength="60" name="maxcharfield" id="maxcharfield" 
+						onKeyDown="textCounter(this,'progressbar4',8)" 
+						onKeyUp="textCounter(this,'progressbar4',8)" 
+						onFocus="textCounter(this,'progressbar4',8)" required/><br />
+
+						<div id="progressbar4" class="progress"></div>
+
+						<script>textCounter(document.getElementById("maxcharfield"),"progressbar4",8)</script>
+						</td>
+				
+				</tr>
+				<tr>
+					<td>Sex:</td>
+					<td>:</td>
+					<td><input type="radio" name="sex" value="Male"/>Male
+				    	<input type="radio" name="sex" value="Female"/>Female
+				    	<input type="radio" name="sex" value="Prefer not to say"/>Prefer Not to Say
+	    				<br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td>:</td>
+					<td><input type="text" name="email" placeholder="Email" size="60" maxlength="60"/><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Phone Number:</td>
+					<td>:</td>
+					<td><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="60" maxlength="60"/><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Date of birth:</td>
+					<td>:</td>
+					<td><input type="month" id="bdaymonth" name="bdaymonth" /><br/></td>
+				</tr>
+					<tr>
+					<td>Nationality:</td>
+					<td>:</td>
+					<td><select name="nationality">
+  <option value="">-- select one --</option>
+  <option value="afghan">Afghan</option>
+  <option value="albanian">Albanian</option>
+  <option value="algerian">Algerian</option>
+  <option value="american">American</option>
+  <option value="andorran">Andorran</option>
+  <option value="angolan">Angolan</option>
+  <option value="antiguans">Antiguans</option>
+  <option value="argentinean">Argentinean</option>
+  <option value="armenian">Armenian</option>
+  <option value="australian">Australian</option>
+  <option value="austrian">Austrian</option>
+  <option value="azerbaijani">Azerbaijani</option>
+  <option value="bahamian">Bahamian</option>
+  <option value="bahraini">Bahraini</option>
+  <option value="bangladeshi">Bangladeshi</option>
+  <option value="barbadian">Barbadian</option>
+  <option value="barbudans">Barbudans</option>
+  <option value="batswana">Batswana</option>
+  <option value="belarusian">Belarusian</option>
+  <option value="belgian">Belgian</option>
+  <option value="belizean">Belizean</option>
+  <option value="beninese">Beninese</option>
+  <option value="bhutanese">Bhutanese</option>
+  <option value="bolivian">Bolivian</option>
+  <option value="bosnian">Bosnian</option>
+  <option value="brazilian">Brazilian</option>
+  <option value="british">British</option>
+  <option value="bruneian">Bruneian</option>
+  <option value="bulgarian">Bulgarian</option>
+  <option value="burkinabe">Burkinabe</option>
+  <option value="burmese">Burmese</option>
+  <option value="burundian">Burundian</option>
+  <option value="cambodian">Cambodian</option>
+  <option value="cameroonian">Cameroonian</option>
+  <option value="canadian">Canadian</option>
+  <option value="cape verdean">Cape Verdean</option>
+  <option value="central african">Central African</option>
+  <option value="chadian">Chadian</option>
+  <option value="chilean">Chilean</option>
+  <option value="chinese">Chinese</option>
+  <option value="colombian">Colombian</option>
+  <option value="comoran">Comoran</option>
+  <option value="congolese">Congolese</option>
+  <option value="costa rican">Costa Rican</option>
+  <option value="croatian">Croatian</option>
+  <option value="cuban">Cuban</option>
+  <option value="cypriot">Cypriot</option>
+  <option value="czech">Czech</option>
+  <option value="danish">Danish</option>
+  <option value="djibouti">Djibouti</option>
+  <option value="dominican">Dominican</option>
+  <option value="dutch">Dutch</option>
+  <option value="east timorese">East Timorese</option>
+  <option value="ecuadorean">Ecuadorean</option>
+  <option value="egyptian">Egyptian</option>
+  <option value="emirian">Emirian</option>
+  <option value="equatorial guinean">Equatorial Guinean</option>
+  <option value="eritrean">Eritrean</option>
+  <option value="estonian">Estonian</option>
+  <option value="ethiopian">Ethiopian</option>
+  <option value="fijian">Fijian</option>
+  <option value="filipino">Filipino</option>
+  <option value="finnish">Finnish</option>
+  <option value="french">French</option>
+  <option value="gabonese">Gabonese</option>
+  <option value="gambian">Gambian</option>
+  <option value="georgian">Georgian</option>
+  <option value="german">German</option>
+  <option value="ghanaian">Ghanaian</option>
+  <option value="greek">Greek</option>
+  <option value="grenadian">Grenadian</option>
+  <option value="guatemalan">Guatemalan</option>
+  <option value="guinea-bissauan">Guinea-Bissauan</option>
+  <option value="guinean">Guinean</option>
+  <option value="guyanese">Guyanese</option>
+  <option value="haitian">Haitian</option>
+  <option value="herzegovinian">Herzegovinian</option>
+  <option value="honduran">Honduran</option>
+  <option value="hungarian">Hungarian</option>
+  <option value="icelander">Icelander</option>
+  <option value="indian">Indian</option>
+  <option value="indonesian">Indonesian</option>
+  <option value="iranian">Iranian</option>
+  <option value="iraqi">Iraqi</option>
+  <option value="irish">Irish</option>
+  <option value="israeli">Israeli</option>
+  <option value="italian">Italian</option>
+  <option value="ivorian">Ivorian</option>
+  <option value="jamaican">Jamaican</option>
+  <option value="japanese">Japanese</option>
+  <option value="jordanian">Jordanian</option>
+  <option value="kazakhstani">Kazakhstani</option>
+  <option value="kenyan">Kenyan</option>
+  <option value="kittian and nevisian">Kittian and Nevisian</option>
+  <option value="kuwaiti">Kuwaiti</option>
+  <option value="kyrgyz">Kyrgyz</option>
+  <option value="laotian">Laotian</option>
+  <option value="latvian">Latvian</option>
+  <option value="lebanese">Lebanese</option>
+  <option value="liberian">Liberian</option>
+  <option value="libyan">Libyan</option>
+  <option value="liechtensteiner">Liechtensteiner</option>
+  <option value="lithuanian">Lithuanian</option>
+  <option value="luxembourger">Luxembourger</option>
+  <option value="macedonian">Macedonian</option>
+  <option value="malagasy">Malagasy</option>
+  <option value="malawian">Malawian</option>
+  <option value="malaysian">Malaysian</option>
+  <option value="maldivan">Maldivan</option>
+  <option value="malian">Malian</option>
+  <option value="maltese">Maltese</option>
+  <option value="marshallese">Marshallese</option>
+  <option value="mauritanian">Mauritanian</option>
+  <option value="mauritian">Mauritian</option>
+  <option value="mexican">Mexican</option>
+  <option value="micronesian">Micronesian</option>
+  <option value="moldovan">Moldovan</option>
+  <option value="monacan">Monacan</option>
+  <option value="mongolian">Mongolian</option>
+  <option value="moroccan">Moroccan</option>
+  <option value="mosotho">Mosotho</option>
+  <option value="motswana">Motswana</option>
+  <option value="mozambican">Mozambican</option>
+  <option value="namibian">Namibian</option>
+  <option value="nauruan">Nauruan</option>
+  <option value="nepalese">Nepalese</option>
+  <option value="new zealander">New Zealander</option>
+  <option value="ni-vanuatu">Ni-Vanuatu</option>
+  <option value="nicaraguan">Nicaraguan</option>
+  <option value="nigerien">Nigerien</option>
+  <option value="north korean">North Korean</option>
+  <option value="northern irish">Northern Irish</option>
+  <option value="norwegian">Norwegian</option>
+  <option value="omani">Omani</option>
+  <option value="pakistani">Pakistani</option>
+  <option value="palauan">Palauan</option>
+  <option value="panamanian">Panamanian</option>
+  <option value="papua new guinean">Papua New Guinean</option>
+  <option value="paraguayan">Paraguayan</option>
+  <option value="peruvian">Peruvian</option>
+  <option value="polish">Polish</option>
+  <option value="portuguese">Portuguese</option>
+  <option value="qatari">Qatari</option>
+  <option value="romanian">Romanian</option>
+  <option value="russian">Russian</option>
+  <option value="rwandan">Rwandan</option>
+  <option value="saint lucian">Saint Lucian</option>
+  <option value="salvadoran">Salvadoran</option>
+  <option value="samoan">Samoan</option>
+  <option value="san marinese">San Marinese</option>
+  <option value="sao tomean">Sao Tomean</option>
+  <option value="saudi">Saudi</option>
+  <option value="scottish">Scottish</option>
+  <option value="senegalese">Senegalese</option>
+  <option value="serbian">Serbian</option>
+  <option value="seychellois">Seychellois</option>
+  <option value="sierra leonean">Sierra Leonean</option>
+  <option value="singaporean">Singaporean</option>
+  <option value="slovakian">Slovakian</option>
+  <option value="slovenian">Slovenian</option>
+  <option value="solomon islander">Solomon Islander</option>
+  <option value="somali">Somali</option>
+  <option value="south african">South African</option>
+  <option value="south korean">South Korean</option>
+  <option value="spanish">Spanish</option>
+  <option value="sri lankan">Sri Lankan</option>
+  <option value="sudanese">Sudanese</option>
+  <option value="surinamer">Surinamer</option>
+  <option value="swazi">Swazi</option>
+  <option value="swedish">Swedish</option>
+  <option value="swiss">Swiss</option>
+  <option value="syrian">Syrian</option>
+  <option value="taiwanese">Taiwanese</option>
+  <option value="tajik">Tajik</option>
+  <option value="tanzanian">Tanzanian</option>
+  <option value="thai">Thai</option>
+  <option value="togolese">Togolese</option>
+  <option value="tongan">Tongan</option>
+  <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+  <option value="tunisian">Tunisian</option>
+  <option value="turkish">Turkish</option>
+  <option value="tuvaluan">Tuvaluan</option>
+  <option value="ugandan">Ugandan</option>
+  <option value="ukrainian">Ukrainian</option>
+  <option value="uruguayan">Uruguayan</option>
+  <option value="uzbekistani">Uzbekistani</option>
+  <option value="venezuelan">Venezuelan</option>
+  <option value="vietnamese">Vietnamese</option>
+  <option value="welsh">Welsh</option>
+  <option value="yemenite">Yemenite</option>
+  <option value="zambian">Zambian</option>
+  <option value="zimbabwean">Zimbabwean</option>
+</select><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>Ask Your Questions:</td>
+					<td>:</td>
+					<td><textarea name="achieve" placeholder="What are your questions about us? We will reply you as soon as possible after received your message." rows="5" cols="55"></textarea><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>I have played in the badminton tournament before:</td>
+					<td>:</td>
+					<td><input type="radio" name="played?" value="Yes"/> Yes
+	    				<input type="radio" name="played?" value="No"/> No
+	    				<br/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Clicked the below button to submit your registration:
+					</td>
+					<td>:</td>
+					<td><button onclick="myalert4()">
+						    submit
+						</button>
+					</td>
+
+				</tr>
+				<tr>
+					<td>Clicked the below button to pay the fee :
+					</td>
+					<td>:</td>
+					<td>
+						<a href="Payment.html" target="_blank">
+						<input type="button" value="Proceed to Payment"/>					
+						</a>
+					</td>
+
+				</tr>
+
+				<script>
+				    function myalert4()
+				    {
+	    				var username = document.forms["nform"]["Name"].value;
+	    				var tpNumber = document.forms["nform"]["TPno"].value;
+	
+	    				if (username === "" ||tpNumber === "") {
+	        				alert("Submission unsuccessful. Please fill in all the required fields.");
+	    					} 
+	    				else {
+	        					window.alert("THANK YOU we received your form! We hope that you will join our club one day.");
+	    					 }				    
+    				}
+
+				   </script>
+				
+				
+				
+				
+			</table>
+			
+		</form><br/><br/><br/><br/><br/>
+    
+    	</section>
+    	
+   </div>
+</div>
+</div>
+</div>
+
+
+
+	<div id="cover">
+                    <a href="login.html">
+                        <div class="button_slide slide_left">Back</div>
+                    </a>
+                    <a href="events.html">
+                        <div class="button_slide slide_right">Next</div>
+                    </a>
+                </div>
+                <br/>
+
+    
+   <div id="footer">
+		<div class="footer-left">
+			<h3>Sunshine Badminton Club</h3>
+	
+			<p>Copyright &#169; 2023 Sunshine Badminton Club <br/>All rights reserved</p>
+		</div>
+		
+		<div class="footer-center">
+			<table>
+				<tr>
+					<td><img src="../image/envelope.png" class="footer-envelope" alt="icon"/></td>
+					<td><p>sunshinebadmintonclub@mail.apu.edu.my</p></td>
+				</tr>
+				<tr>
+					<td><img src="../image/phone.png" class="footer-phone" alt="icon"/></td>
+					<td><p>016-804-0107 - Janice Tan Hooi Chii <br/>
+						011-1088-7482 - Lim Shu Yi <br/>
+						010-770-2168 - Kong Yin Er <br/>
+						017-222-0611 - Nicole Lim Ko Er</p>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="../image/location.png" /></td>
+					<td><p>04-01, Block B, Level 3 @ APU New Campus</p></td>
+				</tr>
+			</table>
+		</div>
+	
+		<div class="footer-right">
+			<p class="footer-aboutclub">
+				<span>About the club</span>
+				Sunshine Badminton Club fosters an inclusive and friendly environment for badminton enthusiasts, providing a platform for players of all skill levels to engage in the sport with joy.
+			</p>
+	
+			<p class="footer-query">
+				<span>Any questions?</span>
+				Get to Contact Us Page by clicking <a href="contactinfo.html">HERE</a>
+			</p>
+		</div>
+	</div>
+<div id="footer-credit">Created by: Kong Yin Er TP073395</div>
+
+    
+   
+
+
+
+
+
+</body>
+
+
+</html>

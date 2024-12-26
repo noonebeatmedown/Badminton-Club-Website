@@ -1,0 +1,144 @@
+﻿
+
+
+
+
+
+CSS
+#footer{
+	background-color: #393E46;
+	box-sizing: border-box;
+	width: 100%;
+	text-align:left;
+	font:bold 16px; 
+	padding: 50px 50px 50px 50px;
+	
+}
+
+#footer .footer-left, #footer .footer-center, #footer .footer-right{
+	display:inline-block;
+	vertical-align:top;
+}
+
+#footer .footer-left{
+	width:30%;
+	text-align:center;
+}
+
+#footer h3{
+	color: #fff;
+	margin:0;
+	font-weight:bold;
+	font-size:30px;
+	margin-top:50px;
+}
+
+.footer-left a{
+	text-decoration: none;
+	color: #fff;
+	font-size:17px;
+}
+
+.footer-left a:hover{
+	color:#000 ;
+	background-color:#ff0000 ;
+	font-weight: bold;
+}
+
+.footer-left p{
+	color: #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin-top: 30px;
+}
+
+#footer .footer-center{
+	width:35%;
+}
+
+#footer .footer-center table{
+	margin:0 auto;
+	padding:10px;
+}
+
+#footer .footer-center i{
+	background-color: #33383b;
+	color:#fff;
+	font-size:25px;
+	width:38px;
+	height:38px;
+	border-radius:50%;
+	text-align:center;
+	line-height:42px;
+	margin:10px 15px;
+	vertical-align:middle;
+}
+
+#footer .footer-center p{
+	display:inline-block;
+	color:#fff;
+	vertical-align:middle;
+	margin:0;
+}
+
+#footer .footer-right{
+	width:30%;
+	text-align:center;
+	margin-left:20px;
+}
+
+#footer .footer-aboutclub{
+	line-height: 20px;
+	color:#ddd;
+	font-size:15px;
+	font-weight:normal;
+	margin:0;
+}
+
+#footer .footer-aboutclub span{
+	display:block;
+	color:#ddd;
+	font-size:18px;
+	font-weight:bold;
+	margin-bottom:20px;
+}
+
+#footer .footer-query{
+	line-height: 20px;
+	color:#ddd;
+	font-size:18px;
+	font-weight:normal;
+	margin:0;
+}
+
+#footer .footer-query span{
+	display:block;
+	color:#ddd;
+	font-size:18px;
+	font-weight:bold;
+	margin-bottom:20px;
+	margin-top:40px;
+}
+
+#footer .footer-query a{
+	text-decoration: none;
+	color:#FFFF00;
+	font-weight:bold;
+}
+
+.footer-envelope{
+	width: 50px;
+}
+
+.footer-phone{
+	width: 50px;
+}
+
+.footer-location{
+	width: 50px;
+}
+
+#footer-credit{
+	text-align:center;
+	font-family: "Comic Sans MS";
+}
